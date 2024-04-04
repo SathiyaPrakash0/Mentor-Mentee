@@ -24,7 +24,7 @@ exports.signUp = async (req, res, next)=>{
             token
         });
     } catch(err){
-        next(error);
+        next(err);
     }
 };
 
