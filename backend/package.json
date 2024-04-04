@@ -4,8 +4,19 @@
   "description": "The application for mentor mentee community hub",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
+    "devStart": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tejaswini, Suriya Vijay",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
 }
