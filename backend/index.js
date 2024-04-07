@@ -11,7 +11,11 @@ const {mentorsAll, mentorsNew, mentor, mentorFilter, mentorFilterExp, mentorFilt
 const app = express();
 
 // middleware configurations
-app.use(cors());
+app.use(cors({
+    origin: ["http://127.0.0.1:3000"],
+    methods: ["POST", "GET"],
+    credentials: true
+}));
 app.use(express.json());
 
 // routers
