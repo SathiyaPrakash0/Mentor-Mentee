@@ -6,6 +6,7 @@ const cors = require("cors");
 
 // controller
 const {signUp, signIn} = require("./controllers/authController");
+const {mentorsAll, mentorsNew, mentor, mentorFilter, mentorFilterExp, mentorFilterGtExp} = require("./controllers/mentorController");
 
 const app = express();
 
@@ -16,6 +17,12 @@ app.use(express.json());
 // routers
 app.post("/signup", signUp);
 app.post("/signin", signIn);
+app.get("/mentorsAll", mentorsAll);
+app.get("/mentorsNew", mentorsNew);
+app.post("/mentor", mentor);
+app.post("/mentorFilter", mentorFilter);
+app.post("/mentorFilterExp", mentorFilterExp);
+app.post("/mentorFilterGtExp", mentorFilterGtExp);
 
 // error handling configurations
 app.use((err, req, res, next) => {
